@@ -1,0 +1,12 @@
+{
+    "schema_version": "3.0.0",
+    "packages": [{
+            "name": "Compare Side-By-Side (ST4)",
+            "details": "https://github.com/ReK42/sublime-compare-side-by-side",
+            "author": ["Doug Ty", "Ryan Kozak"],
+            "labels": ["diff", "compare", "comparison"],
+            "releases": [{"sublime_text": ">=4000", "tags": true}]
+    }],
+    "dependencies": [],
+    "includes": []
+}
