@@ -545,17 +545,16 @@ class SbsCompareCommand(sublime_plugin.TextCommand):
 
         if sbs_settings().get("line_count_popup", False):
             numDiffs = len(highlightA) + len(highlightB)
-            sublime.message_dialog(
-                (
-                    intraDiff,
-                    str(len(highlightA)),
-                    " lines removed, ",
-                    str(len(highlightB)),
-                    " lines added\n",
-                    str(numDiffs),
-                    " line differences total",
-                )
+            diffSummaryMessage = (
+                intraDiff,
+                str(len(highlightA)),
+                " lines removed, ",
+                str(len(highlightB)),
+                " lines added\n",
+                str(numDiffs),
+                " line differences total",
             )
+            sublime.set_timeout(lambda: sublime.message_dialog(diffSummaryMessage), 200)
 
     def run(
         self,
