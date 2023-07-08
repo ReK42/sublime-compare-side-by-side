@@ -303,7 +303,8 @@ class SbsCompareCommand(sublime_plugin.TextCommand):
 
             """Determine theme filename relative for settings, absolute for writing to
             file replacing slashes for relative path necessary on windows completely
-            separate filenames are necessary to avoid json erroneously taking precedence.
+            separate filenames are necessary to avoid json erroneously taking
+            precedence.
             """
             theme_name = "SBSCompareTheme.hidden-tmTheme"
             if scheme_json:
@@ -322,7 +323,8 @@ class SbsCompareCommand(sublime_plugin.TextCommand):
                 sublime.message_dialog(
                     (
                         "Could not write theme file.\n",
-                        "Please ensure that your config directory is writable and restart.\n",
+                        "Please ensure that your Sublime config directory is writable",
+                        " and restart Sublime.\n",
                         "\n",
                         "Full path:\n",
                         abs_theme_file,
